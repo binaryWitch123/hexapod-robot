@@ -1,18 +1,18 @@
-# Line Following Robot (Color-Based Distribution)
+# Hexapod Robot Platform
 
-Mobile robot designed for line tracking and automatic goods sorting based on color.  
-This project demonstrates practical applications of control theory, embedded systems, and mechatronics design.
+Hexapod robot designed for testing hexa-model control, mechanical design learning and prove what we had learnt at university are "useful".
+It's just a platform moving robot so typicaly you can put anything on the top: arm, camera, lidar, machine gun,...
 
+*NOTE 27/01/26: DON'T BUY MG996 Servo with Plastic gearbox, they will strip after 4-5 run times. 
 ---
 
 ## 🚀 Overview
 
-This project focuses on building a line-following robot with:
+This project focuses on building a simple hexapod with:
 
-- Embedded firmware for real-time control  
-- Line tracking using IR sensor array  
-- Color detection for decision making  
-- Autonomous navigation and delivery  
+* Embedded firmware (low-level control)
+* Gait generation & kinematics
+* Use available module and also DIY PCB 
 
 ---
 
@@ -20,93 +20,85 @@ This project focuses on building a line-following robot with:
 
 ### Hardware
 
-- Differential drive mobile platform  
-- DC motors with encoders  
-- IR sensor array (line detection)  
-- Color sensor (Red / Blue detection)  
-- Motor driver (TB6612FNG)  
-- Microcontroller (STM32 / ESP32)  
-- Battery + power management  
+* 6 legs (3 DOF each)
+* Modular joint/leg interface
+* Central control board (MCU-based)
+* Power distribution via contact plates + alignment pins
+* Magnetic alignment system (non-current carrying)
 
 ### Software Stack
 
 ```
-[ High-Level Logic ]
+[ High-Level Control ]
         ↓
-[ Decision Making (Color Detection) ]
+[ Gait Planner ]
         ↓
-[ Line Tracking Algorithm ]
+[ Inverse Kinematics ]
         ↓
-[ PID Motor Control ]
+[ Servo Control Layer ]
         ↓
-[ Hardware Drivers (PWM / ADC / GPIO) ]
+[ Hardware Drivers (PWM / UART / CAN) ]
 ```
 
 ---
 
 ## ⚙️ Features
 
-- Accurate line following (±3 mm error)  
-- Autonomous color-based sorting  
-- PID-based motor control  
-- Modular hardware & software design  
-- Suitable for robotics learning and R&D  
+* Modular mechanical + electrical design
+* Plug-and-play leg modules
+* Real-time gait control
+* Scalable control architecture
+* Designed for embedded + robotics R&D
 
 ---
 
 ## 📂 Repository Structure
 
 ```
-/firmware        → MCU code (control, sensors, PID)
-/hardware        → PCB, schematics, CAD design
-/simulation      → MATLAB / Simulink models
-/docs            → Reports and documentation
+/firmware        → MCU code (STM32 / ESP32 / etc.)
+/hardware        → PCB, schematics, mechanical CAD
+/simulation      → Kinematics / gait simulation
+/docs            → Design documents
 ```
 
 ---
 
 ## 🔧 Technologies
 
-- Embedded C / C++  
-- STM32 / ESP32  
-- PWM / ADC / GPIO  
-- SolidWorks (mechanical design)  
-- MATLAB / Simulink (modeling & control)  
+* Embedded C 
+* ESP32
+* I2C Driver
+* Solidworks
+* Matlab Modeling
 
 ---
 
-## 🧠 Control Concept
+## 🧮 Kinematics (Concept)
 
-- Line position estimated using weighted sensor readings  
-- PID controller used for trajectory correction  
-- State machine handles robot behavior:
+Each leg:
 
-```
-Idle → Follow Line → Detect Load → Detect Color
-     → Navigate → Stop at Destination
-```
+* 3 DOF → Coxa, Femur, Tibia
+* Inverse kinematics used for foot positioning
 
----
+Future work:
 
-## 📊 Specifications
-
-- Speed ≥ 0.1 m/s  
-- Line width: 26 mm  
-- Tracking error: ±3 mm  
-- Stopping error: ±5 mm  
-- Load capacity: ~1 kg  
+* Dynamic gait adaptation
+* Terrain-aware walking
+* Feedback control (IMU + sensors)
 
 ---
 
 ## 📌 Roadmap
 
-- Improve control with Fuzzy / Adaptive PID  
-- Add wireless monitoring (IoT)  
-- Upgrade to vision-based system  
-- Implement SLAM navigation (AMR level)  
+* Improve modular connector reliability
+* Add sensor feedback (IMU, force sensing)
+* Implement advanced gaits
+* Develop ROS interface (optional)
+* Optimize power distribution system
 
 ---
 
 ## 🤝 Contribution
 
-This is an R&D-oriented project. Contributions, improvements, and ideas are welcome.
+This is an R&D-focused project. Contributions, ideas, and experiments are welcome.
+Thanks
