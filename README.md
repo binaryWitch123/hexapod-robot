@@ -6,7 +6,7 @@ It's just a platform moving robot so typicaly you can put anything on the top: a
 *NOTE 27/01/26: DON'T BUY MG996 Servo with Plastic gearbox, they will strip after 4-5 run times. 
 ---
 
-## 🚀 Overview
+##  Overview
 
 This project focuses on building a simple hexapod with:
 
@@ -16,7 +16,7 @@ This project focuses on building a simple hexapod with:
 
 ---
 
-## 🧠 System Architecture
+##  System Architecture
 
 ### Hardware
 
@@ -42,7 +42,7 @@ This project focuses on building a simple hexapod with:
 
 ---
 
-## ⚙️ Features
+##  Features
 
 * Modular mechanical + electrical design
 * Plug-and-play leg modules
@@ -52,7 +52,7 @@ This project focuses on building a simple hexapod with:
 
 ---
 
-## 📂 Repository Structure
+##  Repository Structure
 
 ```
 /firmware        → MCU code (STM32 / ESP32 / etc.)
@@ -63,7 +63,7 @@ This project focuses on building a simple hexapod with:
 
 ---
 
-## 🔧 Technologies
+##  Technologies
 
 * Embedded C 
 * ESP32
@@ -73,7 +73,7 @@ This project focuses on building a simple hexapod with:
 
 ---
 
-## 🧮 Kinematics (Concept)
+##  Kinematics (Concept)
 
 Each leg:
 
@@ -88,7 +88,7 @@ Future work:
 
 ---
 
-## 📌 Roadmap
+##  Roadmap
 
 * Improve modular connector reliability
 * Add sensor feedback (IMU, force sensing)
@@ -98,7 +98,7 @@ Future work:
 
 ---
 
-## 🤝 Contribution
+##  Contribution
 
 This is an R&D-focused project. Contributions, ideas, and experiments are welcome.
 Thanks
