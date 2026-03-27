@@ -5,6 +5,7 @@ It's just a platform moving robot so typicaly you can put anything on the top: a
 
 *NOTE 27/01/26: DON'T BUY MG996 Servo with Plastic gearbox, they will strip after 4-5 run times. 
 ---
+<img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/22bb24c8-72c8-4ba1-8369-b5154eba5968" />
 
 ##  Overview
 
