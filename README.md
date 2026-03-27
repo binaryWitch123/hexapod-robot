@@ -19,6 +19,9 @@ This project focuses on building a simple hexapod with:
 
 ##  System Architecture
 
+<img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/b52aa05e-297f-4966-9dc2-bfe7c382438b" />
+
+
 ### Hardware
 
 * 6 legs (3 DOF each)
@@ -26,7 +29,6 @@ This project focuses on building a simple hexapod with:
 * Central control board (MCU-based)
 * Power distribution via contact plates + alignment pins
 * Magnetic alignment system (non-current carrying)
-  <img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/b52aa05e-297f-4966-9dc2-bfe7c382438b" />
 
 
 ### Software Stack
